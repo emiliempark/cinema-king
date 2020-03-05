@@ -3,7 +3,7 @@ import logo from '../../logo.svg';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import GlobalStyle from './styles';
-
+import Movies from '../Movies'
 function App() {
   
   useEffect(() => {
@@ -14,19 +14,16 @@ function App() {
       <GlobalStyle />
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+            <div>cinema king logo</div>
+            <nav>manu items</nav>
         </header>
+        {/* Router */}
+        <Movies />
+        <footer>
+            <div>links</div>
+            <div>social media</div>
+            <div>lisence</div>
+        </footer>
       </div>
     </>
   );
