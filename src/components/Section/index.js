@@ -6,16 +6,23 @@ import styled from 'styled-components';
 const SectionStyle = styled.section`
     display: flex;
     justify-content: center;
+    .innerWidth{
+        width: 95%;
+        max-width: ${prop => prop.innerWidth? `${prop.innerWidth}px`: 'none'} ;
+    }
+    
+   
 `;
 
 
 
 const Section = (props) => {
+    const { ...other } = props;
     const renderInnerWrapper = () => (<div className="innerWidth">{props.children}</div> );
     
     
     return (
-        <SectionStyle innerWidth={props.innerWidth}>
+        <SectionStyle innerWidth={props.innerWidth} {...other}>
             {props.innerWidth ? renderInnerWrapper() : props.children}
         </SectionStyle>
     )

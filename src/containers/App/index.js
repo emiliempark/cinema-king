@@ -2,8 +2,13 @@ import React, { useEffect } from 'react';
 import logo from '../../logo.svg';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import GlobalStyle from './styles';
+import styled from 'styled-components';
+import styles, {GlobalStyle} from './styles';
 import Movies from '../Movies'
+import Nav from '../../components/Nav';
+import Section from '../../components/Section';
+
+const Header = styled.div`${styles}`;
 function App() {
   
   useEffect(() => {
@@ -13,16 +18,16 @@ function App() {
     <>
       <GlobalStyle />
       <div className="App">
-        <header className="App-header">
+        <Header className="App-header">
             <div>cinema king logo</div>
-            <nav>manu items</nav>
-        </header>
+            <Nav />
+        </Header>
         {/* Router */}
         <Movies />
         <footer>
-            <div>links</div>
-            <div>social media</div>
-            <div>lisence</div>
+            <Section>links</Section>
+            <Section>social media</Section>
+            <Section>lisence</Section>
         </footer>
       </div>
     </>
