@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../../logo.svg';
+import { connect } from 'react-redux';
 
 function App() {
   return (
@@ -23,4 +23,18 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+      // members: state.team.list,
+      // maxEntry: state.team.maxEntry
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+      // updateMember : (array) => dispatch(updateMember(array))
+  }
+  
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
