@@ -1,52 +1,59 @@
-import React, { useEffect } from 'react';
-import logo from '../../logo.svg';
-import { connect } from 'react-redux';
-import axios from 'axios';
-import styled from 'styled-components';
-import styles, {GlobalStyle} from './styles';
-import Movies from '../Movies'
-import Nav from '../../components/Nav';
-import Section from '../../components/Section';
-import mainLogo from '../../images/Learn.png';
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import axios from "axios";
+import styled from "styled-components";
+import styles, { GlobalStyle } from "./styles";
+import Movies from "../Movies";
+import Nav from "../../components/Nav";
+import Section from "../../components/Section";
+import mainLogo from "../../images/Learn.png";
 
-const Header = styled.div`${styles}`;
+const Header = styled.div`
+  ${styles}
+`;
 function App() {
-  
   useEffect(() => {
-    axios.get('https://virtserver.swaggerhub.com/narrative-software/sci-fi-movie-api/1.0.0/movies').then(res => {});
+    axios
+      .get(
+        "https://virtserver.swaggerhub.com/narrative-software/sci-fi-movie-api/1.0.0/movies"
+      )
+      .then(res => {});
   }, []);
   return (
     <>
       <GlobalStyle />
       <div className="App">
         <Header>
-            <div className="mainLogoLink"><a href="#"><img src={mainLogo}/></a></div>
-            <Nav />
+          <div className="mainLogoLink">
+            <a href="#">
+              <img src={mainLogo} />
+            </a>
+          </div>
+          <Nav />
         </Header>
         {/* Router */}
         <Movies />
         <footer>
-            <Section>links</Section>
-            <Section>social media</Section>
-            <Section>lisence</Section>
+          <Section>links</Section>
+          <Section>social media</Section>
+          <Section>lisence</Section>
         </footer>
       </div>
     </>
   );
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-      // members: state.team.list,
-      // maxEntry: state.team.maxEntry
-  }
-}
+    // members: state.team.list,
+    // maxEntry: state.team.maxEntry
+  };
+};
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-      // updateMember : (array) => dispatch(updateMember(array))
-  }
-  
-}
+    // updateMember : (array) => dispatch(updateMember(array))
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
