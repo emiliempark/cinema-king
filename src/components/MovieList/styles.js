@@ -2,6 +2,7 @@ import { css } from "styled-components";
 import themes from "../../themes";
 import viewIcon from "../../images/viewmore.png";
 const styles = css`
+  margin-bottom: 45px;
   .innerWidth {
     display: flex;
     flex-wrap: wrap;

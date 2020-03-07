@@ -4,15 +4,13 @@ import styled from "styled-components";
 import styles, { footerStyles, GlobalStyle } from "./styles";
 import Movies from "../Movies";
 import Nav from "../../components/Nav";
-import Section from "../../components/Section";
+import Footer from "../../components/Footer";
 import mainLogo from "../../images/Learn.png";
 
 const Header = styled.div`
   ${styles}
 `;
-const Footer = styled.footer`
-  ${footerStyles}
-`;
+
 function App() {
   return (
     <>
@@ -28,11 +26,7 @@ function App() {
         </Header>
         {/* Router */}
         <Movies />
-        <Footer>
-          <Section>links</Section>
-          <Section>social media</Section>
-          <Section>lisence</Section>
-        </Footer>
+        <Footer></Footer>
       </div>
     </>
   );

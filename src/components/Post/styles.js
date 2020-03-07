@@ -4,8 +4,9 @@ import hexBg from "../../images/hex-bg.svg";
 const styles = css`
   box-sizing: border-box;
   // min-height: 458px;
-  margin-bottom: 35px;
+  padding-bottom: 35px;
   transform: translateY(-90px);
+  margin-bottom: -90px;
   .innerWidth {
     box-sizing: border-box;
     background-image: url(${hexBg});

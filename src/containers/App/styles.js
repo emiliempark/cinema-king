@@ -122,9 +122,4 @@ const styles = css`
   }
 `;
 
-export const footerStyles = css`
-  background-color: black;
-  color: white;
-  border-top: 7px solid ${colors.secondary};
-`;
 export default styles;

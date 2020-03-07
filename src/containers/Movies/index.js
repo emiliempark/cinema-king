@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Title from "../../components/Title";
 import Post from "../../components/Post";
 import MovieList from "../../components/MovieList";
+import Promo from "../../components/Promo";
 import styles from "./styles";
 import Section from "../../uikit/Section";
 import { getMovies } from "./actions";
@@ -23,10 +24,7 @@ const Movies = props => {
       <Title />
       <Post />
       <MovieList data={props.movieList}>loading or list</MovieList>
-      <Section className="promo">
-        Join the Kingdom for just $5
-        <div>Sigh up</div>
-      </Section>
+      <Promo />
     </Div>
   );
 };

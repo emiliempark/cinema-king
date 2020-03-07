@@ -89,6 +89,20 @@ export const typography = {
     line-height: 40px;
     font-family: ${fonts.reg};
     color: white;
+  `,
+  btn: css`
+    font-size: 17px;
+    line-height: 25px;
+    font-family: ${fonts.med};
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.6;
+  `,
+  copyright: css`
+    font-size: 11px;
+    line-height: 16px;
+    font-family: ${fonts.reg};
+    color: ${colors.ng500};
   `
 };
 
