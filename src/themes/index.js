@@ -4,6 +4,7 @@ export const colors = {
   primary: "#2E19A5",
   secondary: "#F84464",
   ng300: "#B4B4B4",
+  ng500: "#828282",
   ng800: "#393939",
   ng900: "#1C1C1C"
 };
@@ -53,6 +54,16 @@ export const typography = {
   caption: css`
     font-family: ${fonts.bold};
     font-size: 14px;
+  `,
+  mainNav: css`
+    font-size: 12px;
+    line-height: 18px;
+    color: ${colors.ng500};
+    font-family: ${fonts.med};
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+    text-decoration: none;
   `
 };
 

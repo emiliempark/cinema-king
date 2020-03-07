@@ -9,14 +9,47 @@ const NavStyle = styled.section`
   align-items: center;
   width: 100%;
   box-shadow: ${themes.effects.shadow};
+  padding: 0;
+  ul {
+    padding: 0;
+    display: flex;
+  }
+  li {
+    list-style: none;
+    padding: 0 32px;
+    &.current {
+      a {
+        color: ${themes.colors.ng900};
+      }
+    }
+  }
 `;
 
+const NavItem = styled.a`
+  ${themes.typography.mainNav}
+  &:hover: ${themes.colors.ng900};
+`;
 const Nav = props => {
   return (
     <NavStyle>
       <ul>
+        <li className="current">
+          <NavItem href="">Movies</NavItem>
+        </li>
         <li>
-          <a href="">Movies</a>
+          <NavItem href="">Games</NavItem>
+        </li>
+        <li>
+          <NavItem href="">Podcasts</NavItem>
+        </li>
+        <li>
+          <NavItem href="">Award</NavItem>
+        </li>
+        <li>
+          <NavItem href="">Shopping</NavItem>
+        </li>
+        <li>
+          <NavItem href="">Win</NavItem>
         </li>
       </ul>
     </NavStyle>
