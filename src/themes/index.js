@@ -25,6 +25,13 @@ export const typography = {
     font-family: ${fonts.med};
     margin: 0;
   `,
+  subHeading: css`
+    font-size: 48px;
+    line-height: 72px;
+    color: white;
+    font-family: ${fonts.med};
+    margin: 0;
+  `,
   articleTitle: css`
     font-size: 23px;
     line-height: 40px;

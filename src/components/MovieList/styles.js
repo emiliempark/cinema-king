@@ -1,5 +1,6 @@
 import { css } from "styled-components";
 import themes from "../../themes";
+import viewIcon from "../../images/viewmore.png";
 const styles = css`
   .innerWidth {
     display: flex;
@@ -16,14 +17,55 @@ export const itemStyles = css`
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 60px;
-
+  position: relative;
+  &:before{
+      content: '';
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    background-image: url(${viewIcon});
+      background-size: 115px;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 5;
+  }
+  &:hover{
+    cursor: pointer;
+    &:before{
+        display: block;
+    }
+    & .imgView{
+        width: calc(100% - 10px); 
+        padding-top: calc(270 / 386 * 100%);
+        transition: all ease 0.3;
+        &:after{
+            opacity: 1;
+            transform: translate(6px, 6px); 
+        }   
+    }
+  }
   .imgView {
     width: 100%;
-    padding-top: calc(288 / 396 * 100%);
+    padding-top: calc(280 / 396 * 100%);
     // overflow: hidden;
     position: relative;
-    &:hover{
-     cursor: pointer; 
+    z-index: 2;
+    &:after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: ${themes.colors.primary};
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        opacity: 0;
+        transform: translate(0, 0); 
     }
   }
   .imgContent {
@@ -36,6 +78,7 @@ export const itemStyles = css`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 5;
   }
   .rank {
     display: flex;
