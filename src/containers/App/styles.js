@@ -1,5 +1,5 @@
 import { createGlobalStyle, css } from "styled-components";
-import { fonts } from "../../themes";
+import { fonts, colors } from "../../themes";
 
 import poppinsregular from "../../fonts/poppins-regular-webfont.woff";
 import poppinsregular2 from "../../fonts/poppins-regular-webfont.woff2";
@@ -122,4 +122,9 @@ const styles = css`
   }
 `;
 
+export const footerStyles = css`
+  background-color: black;
+  color: white;
+  border-top: 7px solid ${colors.secondary};
+`;
 export default styles;

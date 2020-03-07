@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import axios from "axios";
 import styled from "styled-components";
-import styles, { GlobalStyle } from "./styles";
+import styles, { footerStyles, GlobalStyle } from "./styles";
 import Movies from "../Movies";
 import Nav from "../../components/Nav";
 import Section from "../../components/Section";
@@ -10,6 +9,9 @@ import mainLogo from "../../images/Learn.png";
 
 const Header = styled.div`
   ${styles}
+`;
+const Footer = styled.footer`
+  ${footerStyles}
 `;
 function App() {
   return (
@@ -26,11 +28,11 @@ function App() {
         </Header>
         {/* Router */}
         <Movies />
-        <footer>
+        <Footer>
           <Section>links</Section>
           <Section>social media</Section>
           <Section>lisence</Section>
-        </footer>
+        </Footer>
       </div>
     </>
   );
