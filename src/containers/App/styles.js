@@ -10,8 +10,8 @@ import poppinssemibold2 from "../../fonts/poppins-semibold-webfont.woff2";
 import poppinsblack from "../../fonts/poppins-black-webfont.woff";
 import poppinsblack2 from "../../fonts/poppins-black-webfont.woff2";
 
-import poppinsblack_italic from "../../fonts/poppins-black-webfont.woff";
-import poppinsblack_italic2 from "../../fonts/poppins-black-webfont.woff2";
+import poppinsblack_italic from "../../fonts/poppins-blackitalic-webfont.woff";
+import poppinsblack_italic2 from "../../fonts/poppins-blackitalic-webfont.woff2";
 
 import caladearegular from "../../fonts/caladea-regular-webfont.woff";
 import caladearegular2 from "../../fonts/caladea-regular-webfont.woff2";

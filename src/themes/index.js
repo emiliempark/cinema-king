@@ -1,5 +1,13 @@
 import { css } from "styled-components";
 
+export const colors = {
+  primary: "#2E19A5",
+  secondary: "#F84464",
+  ng300: "#B4B4B4",
+  ng800: "#393939",
+  ng900: "#1C1C1C"
+};
+
 export const fonts = {
   reg: "poppinsregular",
   med: "poppinssemibold",
@@ -16,15 +24,36 @@ export const typography = {
     font-family: ${fonts.med};
     margin: 0;
   `,
+  articleTitle: css`
+    font-size: 23px;
+    line-height: 40px;
+    color: ${colors.ng900};
+    font-family: ${fonts.reg};
+    font-weight: normal;
+    margin: 0;
+  `,
+  article: css`
+    font-size: 17px;
+    line-height: 34px;
+    font-family: ${fonts.textreg};
+    color: ${colors.ng800};
+  `,
+  articleCredit: css`
+    font-size: 14px;
+    line-height: 20px;
+    font-family: ${fonts.med};
+    color: ${colors.ng800};
+  `,
+  articleDate: css`
+    font-size: 11px;
+    line-height: 20px;
+    font-family: ${fonts.boldi};
+    color: ${colors.ng300};
+  `,
   caption: css`
     font-family: ${fonts.bold};
     font-size: 14px;
   `
-};
-
-export const colors = {
-  primary: "#2E19A5",
-  secondary: "#F84464"
 };
 
 export const effects = {
