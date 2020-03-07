@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Section from "../../uikit/Section";
 import styles, { itemStyles } from "./styles";
+import Loading from "../../images/tenor.gif";
 
 const Div = styled(Section)`
   ${styles}
@@ -37,7 +38,13 @@ const MovieList = props => {
 
   return (
     <Div innerWidth={1200} className="movies">
-      {props.isLoading ? "loading" : renderItem(props.movieList)}
+      {props.isLoading ? (
+        <div className="spinner">
+          <img src={Loading} />
+        </div>
+      ) : (
+        renderItem(props.movieList)
+      )}
     </Div>
   );
 };
