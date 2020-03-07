@@ -14,6 +14,11 @@ export const typography = {
     line-height: 100px;
     color: white;
     font-family: ${fonts.med};
+    margin: 0;
+  `,
+  caption: css`
+    font-family: ${fonts.bold};
+    font-size: 14px;
   `
 };
 
