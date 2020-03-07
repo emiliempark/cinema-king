@@ -7,6 +7,7 @@ import styles, {GlobalStyle} from './styles';
 import Movies from '../Movies'
 import Nav from '../../components/Nav';
 import Section from '../../components/Section';
+import mainLogo from '../../images/Learn.png';
 
 const Header = styled.div`${styles}`;
 function App() {
@@ -18,8 +19,8 @@ function App() {
     <>
       <GlobalStyle />
       <div className="App">
-        <Header className="App-header">
-            <div>cinema king logo</div>
+        <Header>
+            <div className="mainLogoLink"><a href="#"><img src={mainLogo}/></a></div>
             <Nav />
         </Header>
         {/* Router */}
