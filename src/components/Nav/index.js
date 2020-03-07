@@ -27,7 +27,9 @@ const NavStyle = styled.section`
 
 const NavItem = styled.a`
   ${themes.typography.mainNav}
-  &:hover: ${themes.colors.ng900};
+  &:hover {
+    color: ${themes.colors.ng900};
+  }
 `;
 const Nav = props => {
   return (

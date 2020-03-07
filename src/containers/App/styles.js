@@ -57,15 +57,16 @@ export const GlobalStyle = createGlobalStyle`
 
   }
 
-  
+  *{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   body, html{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       background-color: #E5E5E5;
       font-family: arial;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       font-family: ${fonts.reg};
       font-size: 12px;
   }

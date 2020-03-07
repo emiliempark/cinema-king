@@ -12,13 +12,6 @@ const Header = styled.div`
   ${styles}
 `;
 function App() {
-  useEffect(() => {
-    axios
-      .get(
-        "https://virtserver.swaggerhub.com/narrative-software/sci-fi-movie-api/1.0.0/movies"
-      )
-      .then(res => {});
-  }, []);
   return (
     <>
       <GlobalStyle />
