@@ -1,4 +1,4 @@
-import { all, put, call, takeLatest } from "redux-saga/effects";
+import { all, put, call, takeLatest, delay } from "redux-saga/effects";
 import axios from "axios";
 import { GET_MOVIES, MOVIE_LOADED } from "../src/containers/Movies/actions";
 
@@ -8,6 +8,7 @@ export function* fetchMovies() {
       "https://virtserver.swaggerhub.com/narrative-software/sci-fi-movie-api/1.0.0/movies";
     const apiData = yield call(axios.get, url);
     // console.log(apiData);
+    yield delay(1000);
     yield put({ type: MOVIE_LOADED, list: apiData });
   } catch (err) {
     console.log(err);
