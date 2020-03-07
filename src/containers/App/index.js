@@ -1,49 +1,48 @@
-import React, { useEffect } from 'react';
-import logo from '../../logo.svg';
-import { connect } from 'react-redux';
-import axios from 'axios';
-import GlobalStyle from './styles';
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import styled from "styled-components";
+import styles, { footerStyles, GlobalStyle } from "./styles";
+import Movies from "../Movies";
+import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
+import mainLogo from "../../images/Learn.png";
+
+const Header = styled.div`
+  ${styles}
+`;
 
 function App() {
-  
-  useEffect(() => {
-    axios.get('https://virtserver.swaggerhub.com/narrative-software/sci-fi-movie-api/1.0.0/movies').then(res => {});
-  }, []);
   return (
     <>
       <GlobalStyle />
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header>
+          <div className="mainLogoLink">
+            <a href="#">
+              <img src={mainLogo} />
+            </a>
+          </div>
+          <Nav />
+        </Header>
+        {/* Router */}
+        <Movies />
+        <Footer></Footer>
       </div>
     </>
   );
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-      // members: state.team.list,
-      // maxEntry: state.team.maxEntry
-  }
-}
+    // members: state.team.list,
+    // maxEntry: state.team.maxEntry
+  };
+};
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-      // updateMember : (array) => dispatch(updateMember(array))
-  }
-  
-}
+    // updateMember : (array) => dispatch(updateMember(array))
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
