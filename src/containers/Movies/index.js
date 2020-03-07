@@ -12,6 +12,7 @@ import { getMovies } from "./actions";
 const Div = styled.div`
   ${styles}
 `;
+
 const Movies = props => {
   useEffect(() => {
     console.log("loaded", props.movieList);

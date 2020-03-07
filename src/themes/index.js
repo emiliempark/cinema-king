@@ -64,6 +64,24 @@ export const typography = {
     margin: 0;
     text-transform: uppercase;
     text-decoration: none;
+  `,
+  movieRank: css`
+    font-size: 23px;
+    line-height: 40px;
+    font-family: ${fonts.boldi};
+    color: black;
+  `,
+  movieTitle: css`
+    font-size: 18px;
+    line-height: 40px;
+    font-family: ${fonts.bold};
+    color: white;
+  `,
+  movieYear: css`
+    font-size: 18px;
+    line-height: 40px;
+    font-family: ${fonts.reg};
+    color: white;
   `
 };
 

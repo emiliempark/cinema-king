@@ -3,17 +3,36 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Section from "../../uikit/Section";
-import styles from "./styles";
+import styles, { itemStyles } from "./styles";
 
 const Div = styled(Section)`
   ${styles}
+`;
+
+const Item = styled.div`
+  ${itemStyles}
 `;
 
 const MovieList = props => {
   useEffect(() => {}, []);
 
   const renderItem = List => {
-    return List.map((item, i) => <div key={i}>{item.name}</div>);
+    return List.map((item, i) => (
+      <Item key={i} url={item.post_url}>
+        <div className="imgView">
+          <div className="imgContent">
+            <div className="rank">
+              <span>{item.rank}.</span>
+            </div>
+            <div className="title">
+              <span>
+                {item.name} <i>({item.release_date.split("-")[0]})</i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </Item>
+    ));
   };
 
   return (
